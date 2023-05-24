@@ -56,10 +56,10 @@ export class SessionRepositorySequelize implements SessionRepository {
 
 		await sequelize.sync({ force: true });
 
-		return new SessionRepositorySequelize(sequelize);
+		return new SessionRepositorySequelize();
 	}
 
-	private constructor(private readonly sequelize: Sequelize) {}
+	private constructor() {}
 
 	public async create(session: Session): Promise<void> {
 		const result = await sessionSequelize.create({

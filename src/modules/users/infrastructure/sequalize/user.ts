@@ -65,10 +65,10 @@ export class UserRepositorySequelize implements UserRepository {
 
 		await sequelize.sync({ force: true });
 
-		return new UserRepositorySequelize(sequelize);
+		return new UserRepositorySequelize();
 	}
 
-	private constructor(private readonly sequelize: Sequelize) {}
+	private constructor() {}
 
 	public async create(user: User): Promise<void> {
 		const result = await userSequelize.create({

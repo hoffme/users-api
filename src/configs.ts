@@ -27,7 +27,4 @@ export class CONFIGS {
 
 		return this.configs;
 	}
-
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
-	private constructor() {}
 }

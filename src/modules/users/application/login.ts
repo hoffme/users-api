@@ -2,7 +2,7 @@ import z from 'zod';
 
 import { UserRepository } from '../domain/userRepository';
 import { SessionRepository } from '../domain/sessionRepository';
-import { ErrorPhoneOrPasswordInvalid, ErrorUserNotFound } from "../domain/userErrors";
+import { ErrorPhoneOrPasswordInvalid } from '../domain/userErrors';
 import { Session } from '../domain/session';
 
 export const UserLogInParamsSchema = z.object({
