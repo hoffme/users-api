@@ -8,7 +8,7 @@
 Clonar el repositorio
 
 ```bash
-git clone git@github.com:hoffme/users-api.git
+git clone https://github.com/hoffme/users-api.git
 ```
 
 Ingresar el el root de la carpeta
