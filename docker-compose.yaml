@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 1234
+
+  app:
+    image: users-api
+    build: .
+    env_file:
+      - ./.env
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: ${PORT:-4000}
+      POSTGRES_PATH: ${POSTGRES_PATH:-postgresql://postgres:1234@db:5432/postgres}
+    depends_on:
+      - 'db'
+    ports:
+      - ${PORT:-4000}:${PORT:-4000}
